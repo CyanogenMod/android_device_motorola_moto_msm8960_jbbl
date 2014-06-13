@@ -35,6 +35,10 @@ on early-init
     # Create PDS mount point
     mkdir /pds 0755 root root
 
+on init
+    chmod 755 /f2fscheck.sh
+    exec /f2fscheck.sh
+
 on early-boot
 # Define Motorola DBVC ATVC Property defaults (failsafe properties)
     setprop ro.sys.atvc_allow_netmon_usb 0
