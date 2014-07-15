@@ -88,10 +88,6 @@ PRODUCT_PACKAGES += \
     init.qcom.post_boot.sh \
     init.qcom.sh
 
-# Ramdisk overrides
-PRODUCT_COPY_FILES += \
-    $(LOCAL_PATH)/rootdir/etc/init.qcom.usb.rc:root/init.qcom.usb.rc
-
 # TWRP
 PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/rootdir/etc/twrp.fstab:recovery/root/etc/twrp.fstab
@@ -126,10 +122,14 @@ PRODUCT_PACKAGES += \
 
 # Misc
 PRODUCT_PROPERTY_OVERRIDES += \
-    ro.usb.mtp=0x2e32 \
-    ro.usb.mtp_adb=0x2e33 \
-    ro.usb.ptp=0x2e30 \
-    ro.usb.ptp_adb=0x2e31 \
+    ro.usb.mtp=0x2e62 \
+    ro.usb.mtp_adb=0x2e63 \
+    ro.usb.ptp=0x2e64 \
+    ro.usb.ptp_adb=0x2e65 \
+    ro.usb.bpt=0x2e28 \
+    ro.usb.bpt_adb=0x2e29 \
+    ro.usb.bpteth=0x2e2a \
+    ro.usb.bpteth_adb=0x2e2b \
     ro.hdmi.enable=true \
     ro.cwm.forbid_format="/fsg,/firmware,/persist,/modem,/boot"
 
