@@ -2,7 +2,7 @@ Unified device configuration for Motorola MSM8960 based devices
 ==============================
 Copyright 2014 - The CyanogenMod Project
 
-This device tree supports:
+This device tree supports following devices (using 4.1 bootloader/firmware):
 
     asanti_c (xt897 - Photon Q - Sprint)
     qinara (mb886 - Atrix HD - AT&T)

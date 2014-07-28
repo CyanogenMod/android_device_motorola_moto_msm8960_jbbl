@@ -23,7 +23,7 @@
 LOCAL_PATH := $(call my-dir)
 
 ifeq ($(BOARD_VENDOR),motorola-qcom)
-ifeq ($(TARGET_DEVICE),moto_msm8960)
+ifeq ($(TARGET_DEVICE),moto_msm8960_legacy)
 include $(call all-subdir-makefiles,$(LOCAL_PATH))
 endif
 endif
