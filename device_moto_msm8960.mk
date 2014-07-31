@@ -16,7 +16,7 @@ $(call inherit-product, frameworks/native/build/phone-xhdpi-1024-dalvik-heap.mk)
 
 $(call inherit-product, $(SRC_TARGET_DIR)/product/languages_full.mk)
 
-LOCAL_PATH := device/motorola/moto_msm8960_jb
+LOCAL_PATH := device/motorola/moto_msm8960_jbbl
 
 ## overlays
 DEVICE_PACKAGE_OVERLAYS += $(LOCAL_PATH)/overlay
@@ -110,7 +110,7 @@ PRODUCT_COPY_FILES += \
 # XT90x recovery
 PRODUCT_COPY_FILES += \
     device/motorola/qcom-common/idc/atmxt-i2c.idc:recovery/root/vendor/firmware/atmxt-i2c.idc \
-    vendor/motorola/moto_msm8960_jb/proprietary/etc/firmware/atmxt-r2.tdat:recovery/root/vendor/firmware/atmxt-r2.tdat
+    vendor/motorola/moto_msm8960_jbbl/proprietary/etc/firmware/atmxt-r2.tdat:recovery/root/vendor/firmware/atmxt-r2.tdat
 
 # Include 960x540 boot animation in the zip
 PRODUCT_COPY_FILES += \
@@ -168,4 +168,4 @@ $(call inherit-product, device/motorola/qcom-common/idc/idc.mk)
 $(call inherit-product, device/motorola/qcom-common/keychars/keychars.mk)
 $(call inherit-product, device/motorola/qcom-common/keylayout/keylayout.mk)
 $(call inherit-product, device/motorola/qcom-common/modules/nfc/nfc.mk)
-$(call inherit-product, vendor/motorola/moto_msm8960_jb/moto_msm8960-vendor.mk)
+$(call inherit-product, vendor/motorola/moto_msm8960_jbbl/moto_msm8960-vendor.mk)
