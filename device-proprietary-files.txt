@@ -7,6 +7,7 @@ bin/qdumpd
 bin/qmi_motext_hook
 bin/qmiproxy
 bin/qmuxd
+bin/qseecomd
 bin/rmt_storage
 bin/sensors.qcom
 bin/thermald
@@ -33,7 +34,7 @@ lib/libaudcal.so
 lib/libbabysit.so
 lib/libconfigdb.so
 lib/libcsd-client.so
-lib/libdiag.so
+vendor/lib/libdiag.so
 lib/libdsi_netctrl.so
 lib/libdsprofile.so
 lib/libdss.so
@@ -48,6 +49,7 @@ lib/libimage-omx-common.so
 lib/libmm-color-convertor.so
 lib/libmmjpeg.so
 lib/libmmmpod.so
+lib/libmmparser.so
 lib/libmmrtpencoder.so
 lib/libmmstereo.so
 lib/libmmstillomx.so
@@ -63,10 +65,11 @@ lib/libqmi.so
 lib/libqmi_cci.so
 lib/libqmi_client_qmux.so
 lib/libqmi_common_so.so
-lib/libqmi_csi.so
+vendor/lib/libqmi_csi.so
 lib/libqmi_csvt_srvc.so
-lib/libqmi_encdec.so
+vendor/lib/libqmi_encdec.so
 lib/libqmiservices.so
+lib/libQSEEComAPI.so
 lib/libril-qc-qmi-1.so
 lib/libril-qcril-hook-oem.so
 lib/libsarqmictrl.so
@@ -103,14 +106,17 @@ lib/libchromatix_s5k3l1yx_preview.so
 lib/libchromatix_s5k3l1yx_video_hd.so
 lib/libchromatix_s5k3l1yx_zsl.so
 
+# Media firmware
+etc/firmware/vidc.b00
+etc/firmware/vidc.b01
+etc/firmware/vidc.b02
+etc/firmware/vidc.b03
+etc/firmware/vidc.mdt
+etc/firmware/vidc_1080p.fw
+etc/firmware/vidcfw.elf
+
 ## Adreno GPU
-etc/firmware/a225p5_pm4.fw
-etc/firmware/a225_pfp.fw
-etc/firmware/a225_pm4.fw
-etc/firmware/a300_pfp.fw
 etc/firmware/a300_pm4.fw
-etc/firmware/leia_pfp_470.fw
-etc/firmware/leia_pm4_470.fw
 lib/egl/eglsubAndroid.so
 lib/egl/libEGL_adreno200.so
 lib/egl/libGLESv1_CM_adreno200.so
