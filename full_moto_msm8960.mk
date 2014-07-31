@@ -26,11 +26,11 @@
 # Inherit from those products. Most specific first.
 $(call inherit-product, $(SRC_TARGET_DIR)/product/full_base_telephony.mk)
 # Inherit from moto_msm8960 device
-$(call inherit-product, device/motorola/moto_msm8960_legacy/device_moto_msm8960.mk)
+$(call inherit-product, device/motorola/moto_msm8960_jb/device_moto_msm8960.mk)
 
 ## Device identifier. This must come after all inclusions
-PRODUCT_DEVICE := moto_msm8960_legacy
-PRODUCT_NAME := full_moto_msm8960_legacy
+PRODUCT_DEVICE := moto_msm8960_jb
+PRODUCT_NAME := full_moto_msm8960_jb
 PRODUCT_BRAND := motorola
 PRODUCT_MODEL := MOTOROLA MSM8960
 PRODUCT_MANUFACTURER := motorola
