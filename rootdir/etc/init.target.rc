@@ -52,11 +52,7 @@ on early-boot
     start qseecomd
 
 on charger
-    trigger early-fs
-    trigger fs
-    trigger post-fs
-    trigger post-fs-data
-    trigger property_service_init
+    mount_all fstab.qcom
     trigger start-charging
 
 on start-charging
@@ -95,19 +91,6 @@ on start-charging
     # Prepare for charge-only mode
     write /sys/devices/system/cpu/cpu0/cpufreq/scaling_governor ondemand
     write /sys/devices/system/cpu/cpu1/online 0
-    exec /system/bin/charge_only_mode
-
-on property:sys.chargeonly.mode=1
-    class_stop core
-    class_stop main
-    class_stop late_start
-    start batt_health
-    start whisperd
-    start qcom-post-boot
-    # Prepare for charge-only mode
-    write /sys/devices/system/cpu/cpu0/cpufreq/scaling_governor ondemand
-    write /sys/devices/system/cpu/cpu1/online 0
-    write /data/chargeonlymode charging
     exec /system/bin/charge_only_mode
 
 on property:ro.modem.no_wdog_chk=1
