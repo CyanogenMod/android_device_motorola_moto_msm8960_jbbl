@@ -17,7 +17,7 @@
 -->
 <resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
   <string name="app_name">Asanti klavye</string>
-  <string name="keyboard_layouts_label">Photon Q klavye</string>
+  <string name="keyboard_layouts_label">Foton Q klavye</string>
   <string name="keypad_asanti_qwerty_label">Asanti QWERTY</string>
   <string name="keypad_asanti_qwertz_label">Asanti QWERTZ</string>
   <string name="keypad_asanti_czech_qwerty_label">Asanti Çek QWERTY</string>
