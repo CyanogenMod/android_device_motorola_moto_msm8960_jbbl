@@ -23,7 +23,7 @@ lib/libgeofence.so
 lib/libloc_api_v02.so
 
 # HAL
-lib/hw/vendor-camera.msm8960.so
+lib/hw/camera.vendor.msm8960.so
 lib/hw/sensorhub.msm8960.so
 lib/hw/sensors.msm8960.so
 lib/hw/sensors.oem.so
