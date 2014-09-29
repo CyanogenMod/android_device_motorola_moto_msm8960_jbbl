@@ -16,12 +16,12 @@
      limitations under the License.
 -->
 <resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
-  <string name="app_name">Asanti-Tastatur</string>
-  <string name="keyboard_layouts_label">Photon Q-Tastatur</string>
-  <string name="keypad_asanti_qwerty_label">Asanti-QWERTY</string>
-  <string name="keypad_asanti_qwertz_label">Asanti-QWERTZ</string>
-  <string name="keypad_asanti_czech_qwerty_label">Asanti-QWERTY (Tschechesch)</string>
-  <string name="keypad_asanti_czech_qwertz_label">Asanti-QWERTZ (Tschechesch)</string>
-  <string name="keypad_asanti_cro_qwerty_label">Asanti-QWERTY (Kroatesch)</string>
-  <string name="keypad_asanti_cro_qwertz_label">Asanti-QWERTZ (Kroatesch)</string>
+  <string name="app_name">Asanti teklatua</string>
+  <string name="keyboard_layouts_label">Photon Q teklatua</string>
+  <string name="keypad_asanti_qwerty_label">Asanti QWERTY</string>
+  <string name="keypad_asanti_qwertz_label">Asanti QWERTZ</string>
+  <string name="keypad_asanti_czech_qwerty_label">Asanti QWERTY txekiarra</string>
+  <string name="keypad_asanti_czech_qwertz_label">Asanti QWERTZ txekiarra</string>
+  <string name="keypad_asanti_cro_qwerty_label">Asanti QWERTY kroatiarra</string>
+  <string name="keypad_asanti_cro_qwertz_label">Asanti QWERTZ kroatiarra</string>
 </resources>
