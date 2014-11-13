@@ -40,6 +40,8 @@ TARGET_UNIFIED_DEVICE := true
 TARGET_INIT_VENDOR_LIB := libinit_msm
 TARGET_LIBINIT_DEFINES_FILE := device/motorola/moto_msm8960_jbbl/init/init_moto_msm8960.c
 
+BOARD_USES_LEGACY_MMAP := true
+
 # Inline kernel building
 TARGET_KERNEL_SOURCE := kernel/motorola/msm8960-common
 TARGET_KERNEL_CONFIG := msm8960_mmi_defconfig
