@@ -34,6 +34,12 @@ import java.util.ArrayList;
  * {@hide}
  */
 public class MotorolaQualcommRIL extends RIL implements CommandsInterface {
+    public MotorolaQualcommRIL(Context context, int preferredNetworkType,
+            int cdmaSubscription, Integer instanceId) {
+        this(context, preferredNetworkType, cdmaSubscription);
+        mQANElements = 5; // fifth element is network generation - 2G/3G/(4G?)
+    }
+
     public MotorolaQualcommRIL(Context context, int networkMode, int cdmaSubscription) {
         super(context, networkMode, cdmaSubscription);
         mQANElements = 5; // fifth element is network generation - 2G/3G/(4G?)
