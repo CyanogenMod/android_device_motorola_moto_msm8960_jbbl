@@ -21,6 +21,9 @@
 # definition file).
 #
 
+# QCOM SELinux policy
+include device/qcom/sepolicy/sepolicy.mk
+
 BOARD_VENDOR := motorola-qcom
 
 # Platform
