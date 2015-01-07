@@ -1,89 +1,15 @@
-# Bins
+# Audio
 bin/ap_gain.bin
 bin/ap_gain_mmul.bin
-bin/mpdecision
-bin/netmgrd
-bin/qdumpd
-bin/qmi_motext_hook
-bin/qmiproxy
-bin/qmuxd
-bin/qseecomd
-bin/rmt_storage
-bin/sensors.qcom
-bin/thermald
-bin/whisperd
-
-#etc
-etc/firmware/atmxt-r1.tdat
-etc/firmware/atmxt-r2.tdat
-etc/firmware/melfas_45_7_15.fw
-
-# GPS
-lib/libgeofence.so
-lib/libloc_api_v02.so
-
-# HAL
-lib/hw/camera.vendor.msm8960.so
-lib/hw/sensorhub.msm8960.so
-lib/hw/sensors.msm8960.so
-lib/hw/sensors.oem.so
-
-# Libs
-lib/libAKM.so
 lib/libaudcal.so
-lib/libbabysit.so
-lib/libconfigdb.so
 lib/libcsd-client.so
-vendor/lib/libdiag.so
-lib/libdsi_netctrl.so
-lib/libdsprofile.so
-lib/libdss.so
-lib/libdsucsd.so
-lib/libdsutils.so
-lib/libgemini.so
-lib/libgps.so
-lib/libI420colorconvert.so
-lib/libidl.so
-lib/libimage-jpeg-enc-omx-comp.so
-lib/libimage-omx-common.so
-lib/libmm-color-convertor.so
-lib/libmmjpeg.so
-lib/libmmmpod.so
-lib/libmmparser.so
-lib/libmmrtpencoder.so
-lib/libmmstereo.so
-lib/libmmstillomx.so
-lib/libmotext_inf.so
-lib/libmoto_netutil.so
-lib/libmotpostprocinterface.so
-lib/libnative_renderer.so
-lib/libnetmgr.so
-lib/libqcci_legacy.so
-lib/libqdi.so
-lib/libqdp.so
-lib/libqmi.so
-lib/libqmi_cci.so
-lib/libqmi_client_qmux.so
-lib/libqmi_common_so.so
-vendor/lib/libqmi_csi.so
-lib/libqmi_csvt_srvc.so
-vendor/lib/libqmi_encdec.so
-lib/libqmiservices.so
-lib/libQSEEComAPI.so
-lib/libril-qc-qmi-1.so
-lib/libril-qcril-hook-oem.so
-lib/libsarqmictrl.so
-lib/libsensor1.so
-lib/libsensorhub_jni.so
-lib/libsensor_reg.so
+# ION audio support from HTC S4
+lib/libacdbloader.so
 
 # Camera
 bin/mm-qcamera-daemon
 bin/v4l2-qcamera-app
-lib/libmmcamera_faceproc.so
-lib/libmmcamera_frameproc.so
-lib/libmmcamera_statsproc30.so
-lib/liboemcamera.so
+lib/hw/camera.vendor.msm8960.so
 lib/libchromatix_imx074_default_video.so
 lib/libchromatix_imx074_preview.so
 lib/libchromatix_imx074_video_hd.so
@@ -105,18 +31,30 @@ lib/libchromatix_s5k3l1yx_hfr_90fps.so
 lib/libchromatix_s5k3l1yx_preview.so
 lib/libchromatix_s5k3l1yx_video_hd.so
 lib/libchromatix_s5k3l1yx_zsl.so
+lib/libimage-jpeg-enc-omx-comp.so
+lib/libimage-omx-common.so
+lib/libmmcamera_faceproc.so
+lib/libmmcamera_frameproc.so
+lib/libmmcamera_statsproc30.so
+lib/libmmjpeg.so
+lib/libmmmpod.so
+lib/libmmrtpencoder.so
+lib/libmmstereo.so
+lib/libmmstillomx.so
+lib/libmotpostprocinterface.so
+lib/libnative_renderer.so
+lib/liboemcamera.so
 
-# Media firmware
-etc/firmware/vidc.b00
-etc/firmware/vidc.b01
-etc/firmware/vidc.b02
-etc/firmware/vidc.b03
-etc/firmware/vidc.mdt
-etc/firmware/vidc_1080p.fw
-etc/firmware/vidcfw.elf
+# DRM
+bin/qseecomd
+lib/libQSEEComAPI.so
 
-## Adreno GPU
-etc/firmware/a300_pm4.fw
+# GPS
+lib/libgeofence.so
+lib/libgps.so
+lib/libloc_api_v02.so
+
+# Graphics
 lib/egl/eglsubAndroid.so
 lib/egl/libEGL_adreno200.so
 lib/egl/libGLESv1_CM_adreno200.so
@@ -133,8 +71,83 @@ lib/libOpenVG.so
 lib/libsc-a2xx.so
 lib/libsc-a3xx.so
 
-# ION audio support from HTC S4
-lib/libacdbloader.so
+# Graphics firmware
+etc/firmware/a300_pm4.fw
+
+# Media
+lib/libI420colorconvert.so
+lib/libgemini.so
+lib/libmmparser.so
+lib/libmm-color-convertor.so
+
+# Media firmware
+etc/firmware/vidc.b00
+etc/firmware/vidc.b01
+etc/firmware/vidc.b02
+etc/firmware/vidc.b03
+etc/firmware/vidc.mdt
+etc/firmware/vidc_1080p.fw
+etc/firmware/vidcfw.elf
+
+# Moto
+bin/whisperd
+lib/libmoto_netutil.so
+
+# Perf
+bin/mpdecision
+
+# Qualcomm framework
+lib/libconfigdb.so
+lib/libdsi_netctrl.so
+lib/libdsprofile.so
+lib/libdss.so
+lib/libdsucsd.so
+lib/libdsutils.so
+lib/libidl.so
+lib/libqcci_legacy.so
+lib/libqdi.so
+lib/libqdp.so
+lib/libqmi.so
+lib/libqmi_cci.so
+lib/libqmi_client_qmux.so
+lib/libqmi_csvt_srvc.so
+lib/libqmi_common_so.so
+lib/libqmiservices.so
+vendor/lib/libdiag.so
+vendor/lib/libqmi_csi.so
+vendor/lib/libqmi_encdec.so
+
+# Radio
+bin/netmgrd
+bin/qdumpd
+bin/qmi_motext_hook
+bin/qmiproxy
+bin/qmuxd
+bin/rmt_storage
+lib/libbabysit.so
+lib/libmotext_inf.so
+lib/libnetmgr.so
+lib/libril-qc-qmi-1.so
+lib/libril-qcril-hook-oem.so
+lib/libsarqmictrl.so
+
+# Sensors
+bin/sensors.qcom
+lib/hw/sensorhub.msm8960.so
+lib/hw/sensors.msm8960.so
+lib/hw/sensors.oem.so
+lib/libAKM.so
+lib/libsensor1.so
+lib/libsensorhub_jni.so
+lib/libsensor_reg.so
+
+# Touch Firmware
+etc/firmware/atmxt-r1.tdat
+etc/firmware/atmxt-r2.tdat
+etc/firmware/melfas_45_7_15.fw
+
+# Thermal
+bin/thermald
 
 # Device specific
 xt897/lib/libaudcal.so
