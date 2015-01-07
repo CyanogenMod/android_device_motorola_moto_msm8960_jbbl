@@ -83,6 +83,8 @@ lib/libI420colorconvert.so
 lib/libgemini.so
 lib/libmmparser.so
 lib/libmm-color-convertor.so
+lib/libOmxVenc.so
+lib/libOmxVdec.so
 
 # Media firmware
 etc/firmware/vidc.b00
