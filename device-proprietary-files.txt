@@ -50,9 +50,13 @@ bin/qseecomd
 lib/libQSEEComAPI.so
 
 # GPS
+lib/hw/gps.msm8960.so
 lib/libgeofence.so
 lib/libgps.so
+lib/libgps.utils.so
+lib/libloc_adapter.so
 lib/libloc_api_v02.so
+lib/libloc_eng.so
 
 # Graphics
 lib/egl/eglsubAndroid.so
