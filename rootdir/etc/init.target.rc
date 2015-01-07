@@ -98,6 +98,7 @@ on property:ro.modem.no_wdog_chk=1
 
 on fs
     mount_all /fstab.qcom
+    swapon_all fstab.qcom
     restorecon_recursive /persist
 
 on post-fs
