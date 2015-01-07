@@ -1,0 +1,9 @@
+type atvc, domain;
+type atvc_exec, exec_type, file_type;
+init_daemon_domain(atvc)
+
+allow atvc pds_file:dir r_dir_perms;
+allow atvc atvc_device:chr_file rw_file_perms;
+
+unix_socket_connect(atvc, property, init)
+allow atvc atvc_prop:property_service set;

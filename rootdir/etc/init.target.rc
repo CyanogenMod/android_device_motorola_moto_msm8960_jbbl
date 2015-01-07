@@ -98,13 +98,7 @@ on property:ro.modem.no_wdog_chk=1
 
 on fs
     mount_all /fstab.qcom
-    restorecon /persist
-    restorecon /persist/.bt_nv.bin
-    restorecon /persist/WCNSS_qcom_wlan_nv.bin
-    restorecon /persist/drm/widevine
-    restorecon /persist/drm/widevine/5dsokxEEDXgQhkN50bp-Z2K5InM_
-    restorecon /persist/drm/widevine/5dsokxEEDXgQhkN50bp-Z2K5InM_/RXFABDUxyT6Q+Zwx9ZhPGOq2Bq8_
-    restorecon /persist/drm/widevine/5dsokxEEDXgQhkN50bp-Z2K5InM_/Y4Nj+fDlt0uaX0xnzOj1AjymTvQ_
+    restorecon_recursive /persist
 
 on post-fs
     chmod 755 /system/etc/init.crda.sh
@@ -123,6 +117,7 @@ on post-fs
 
     wait /dev/block/platform/msm_sdcc.1/by-name/pds
     exec /system/bin/mount_pds.sh
+    restorecon_recursive /pds
 
     mount ext4 /dev/block/platform/msm_sdcc.1/by-name/system /system ro remount
 
@@ -479,7 +474,7 @@ service ftmipcd /system/bin/ftmipcd
 on property:ro.bootmode=factory
     start ftmipcd
 
-service graphicsd /system/bin/logwrapper /system/bin/graphicsd
+service graphicsd /system/bin/graphicsd
     class main
     user system
     group system log

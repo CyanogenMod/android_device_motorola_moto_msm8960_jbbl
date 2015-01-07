@@ -100,3 +100,35 @@ TARGET_USERIMAGES_USE_EXT4 := true
 # Needs to be changed for M
 DEVICE_RESOLUTION := 720x1280
 #DEVICE_RESOLUTION := 540x960
+
+# SELinux
+BOARD_SEPOLICY_DIRS += \
+    device/motorola/moto_msm8960_jbbl/sepolicy
+
+BOARD_SEPOLICY_UNION += \
+    atvc.te \
+    batt_health.te \
+    bootmodem.te \
+    device.te \
+    file.te \
+    file_contexts \
+    graphicsd.te \
+    location.te \
+    mm-qcamerad.te \
+    mpdecision.te \
+    netd.te \
+    netmgrd.te \
+    platform_app.te \
+    property_contexts \
+    property.te \
+    qdumpd.te \
+    qmuxd.te \
+    rild.te \
+    rmt_storage.te \
+    sensors.te \
+    surfaceflinger.te \
+    tee.te \
+    thermal-engine.te \
+    time_daemon.te \
+    ueventd.te \
+    whisperd.te
