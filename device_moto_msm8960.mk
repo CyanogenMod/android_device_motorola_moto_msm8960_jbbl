@@ -37,6 +37,7 @@ PRODUCT_PACKAGES += \
 PRODUCT_PACKAGES += \
     camera.msm8960 \
     copybit.msm8960 \
+    gps.msm8960 \
     gralloc.msm8960 \
     hwcomposer.msm8960 \
     lights.MSM8960 \
