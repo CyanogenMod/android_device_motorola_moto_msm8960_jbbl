@@ -55,13 +55,8 @@ BOARD_KERNEL_PAGESIZE := 2048
 BOARD_MKBOOTIMG_ARGS := --ramdisk_offset 0x01600000
 BOARD_USERDATAIMAGE_PARTITION_SIZE := 12884901888
 
-# QCOM BSP
-TARGET_USES_QCOM_BSP := true
-
 # Telephony
 BOARD_RIL_CLASS := ../../../$(LOCAL_PATH)/ril/MotorolaQualcommRIL.java
-BOARD_RIL_NO_CELLINFOLIST := true
-COMMON_GLOBAL_CFLAGS += -DRIL_SUPPORTS_SEEK
 
 # Audio
 BOARD_USES_LEGACY_ALSA_AUDIO := true
@@ -88,8 +83,6 @@ TARGET_RELEASETOOLS_EXTENSIONS := device/motorola/moto_msm8960_jbbl
 TARGET_OTA_ASSERT_DEVICE := moto_msm8960_jbbl,moto_msm8960,xt901,solstice,xt905,smq_u,scorpion_mini_u,xt907,scorpion_mini,xt925,vanquish_u,xt926,vanquish,mb886,qinara,xt897,asanti,xt897c,asanti_c
 
 # Recovery
-TARGET_RECOVERY_NO_MSM_BSP := true
-BOARD_CUSTOM_GRAPHICS := ../../../$(LOCAL_PATH)/graphics.c
 TARGET_RECOVERY_PIXEL_FORMAT := "RGBA_8888"
 TARGET_RECOVERY_FSTAB := $(LOCAL_PATH)/rootdir/etc/fstab.qcom
 
