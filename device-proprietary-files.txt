@@ -79,6 +79,8 @@ lib/libI420colorconvert.so
 lib/libgemini.so
 lib/libmmparser.so
 lib/libmm-color-convertor.so
+lib/libmm-omxcore.so
+lib/libOmxCore.so
 lib/libOmxVenc.so
 lib/libOmxVdec.so
 
