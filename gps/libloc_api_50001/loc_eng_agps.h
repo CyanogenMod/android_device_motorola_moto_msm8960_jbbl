@@ -43,6 +43,19 @@
 class AgpsStateMachine;
 class Subscriber;
 
+/** Represents the status of AGPS. */
+typedef struct {
+    /** set to sizeof(AGpsExtStatus) */
+    size_t          size;
+
+    AGpsType        type;
+    AGpsStatusValue status;
+    int             ipv4_addr;
+    char            ipv6_addr[16];
+    char            ssid[SSID_BUF_SIZE];
+    char            password[SSID_BUF_SIZE];
+} AGpsExtStatus;
+
 // NIF resource events
 typedef enum {
     RSRC_SUBSCRIBE,
