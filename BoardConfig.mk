@@ -107,6 +107,7 @@ BOARD_SEPOLICY_UNION += \
     file_contexts \
     graphicsd.te \
     location.te \
+    mediaserver.te \
     mm-qcamerad.te \
     mpdecision.te \
     netd.te \
