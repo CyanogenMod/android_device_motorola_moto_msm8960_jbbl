@@ -1,7 +1,6 @@
 # Audio
 bin/ap_gain.bin
 bin/ap_gain_mmul.bin
-lib/libaudcal.so
 lib/libcsd-client.so
 # ION audio support from HTC S4
 lib/libacdbloader.so
@@ -145,16 +144,5 @@ lib/libsensor1.so
 lib/libsensorhub_jni.so
 lib/libsensor_reg.so
 
-# Touch Firmware
-etc/firmware/atmxt-r1.tdat
-etc/firmware/atmxt-r2.tdat
-etc/firmware/melfas_45_7_15.fw
-
 # Thermal
 bin/thermald
-
-# Device specific
-xt897/lib/libaudcal.so
-xt897/etc/firmware/atmxt-r2.tdat
-xt901/lib/libqmiservices.so
-xt901/lib/libril-qc-qmi-1.so

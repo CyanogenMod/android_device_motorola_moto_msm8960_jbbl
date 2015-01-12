@@ -1,5 +1,5 @@
 #
-# Copyright (C) 2014 The CyanogenMod Project
+# Copyright (C) 2015 The CyanogenMod Project
 #
 # Licensed under the Apache License, Version 2.0 (the "License");
 # you may not use this file except in compliance with the License.
@@ -21,8 +21,8 @@
 # definition file).
 #
 
-# QCOM SELinux policy
-include device/qcom/sepolicy/sepolicy.mk
+# inherit from the proprietary version
+-include vendor/motorola/msm8960_jbbl-common/BoardConfigVendor.mk
 
 BOARD_VENDOR := motorola-qcom
 
@@ -34,16 +34,9 @@ TARGET_CPU_VARIANT := krait
 
 -include device/motorola/qcom-common/BoardConfigCommon.mk
 
-LOCAL_PATH := device/motorola/moto_msm8960_jbbl
+LOCAL_PATH := device/motorola/msm8960_jbbl-common
 
 TARGET_SPECIFIC_HEADER_PATH += $(LOCAL_PATH)/include
-
-# Vendor Init
-TARGET_UNIFIED_DEVICE := true
-TARGET_INIT_VENDOR_LIB := libinit_msm
-TARGET_LIBINIT_DEFINES_FILE := device/motorola/moto_msm8960_jbbl/init/init_moto_msm8960.c
-
-BOARD_USES_LEGACY_MMAP := true
 
 # Inline kernel building
 TARGET_KERNEL_SOURCE := kernel/motorola/msm8960-common
@@ -53,7 +46,7 @@ BOARD_KERNEL_CMDLINE := console=/dev/null androidboot.hardware=qcom user_debug=3
 BOARD_KERNEL_BASE := 0x80200000
 BOARD_KERNEL_PAGESIZE := 2048
 BOARD_MKBOOTIMG_ARGS := --ramdisk_offset 0x01600000
-BOARD_USERDATAIMAGE_PARTITION_SIZE := 12884901888
+#BOARD_USERDATAIMAGE_PARTITION_SIZE := 12884901888
 
 # Telephony
 BOARD_RIL_CLASS := ../../../$(LOCAL_PATH)/ril/MotorolaQualcommRIL.java
@@ -62,41 +55,38 @@ BOARD_RIL_CLASS := ../../../$(LOCAL_PATH)/ril/MotorolaQualcommRIL.java
 BOARD_USES_LEGACY_ALSA_AUDIO := true
 BOARD_USES_MOTOROLA_EMU_AUDIO := true
 
-# Bluetooth
-BOARD_BLUETOOTH_BDROID_BUILDCFG_INCLUDE_DIR := $(LOCAL_PATH)/bluetooth
-
 # Camera
 TARGET_PROVIDES_CAMERA_HAL := true
 COMMON_GLOBAL_CFLAGS += -DMR0_CAMERA_BLOB -DQCOM_BSP_CAMERA_ABI_HACK
 TARGET_RELEASE_CPPFLAGS += -DNEEDS_VECTORIMPL_SYMBOLS
 
-# GPS
-BOARD_HAVE_NEW_QC_GPS := true
-
 # Graphics
 BOARD_EGL_CFG := $(LOCAL_PATH)/config/egl.cfg
 
-# Custom relese tools for unified devices
-TARGET_RELEASETOOLS_EXTENSIONS := device/motorola/moto_msm8960_jbbl
+# Media
+TARGET_NO_ADAPTIVE_PLAYBACK := true
 
-# Assert
-TARGET_OTA_ASSERT_DEVICE := moto_msm8960_jbbl,moto_msm8960,xt901,solstice,xt905,smq_u,scorpion_mini_u,xt907,scorpion_mini,xt925,vanquish_u,xt926,vanquish,mb886,qinara,xt897,asanti,xt897c,asanti_c
+# Custom relese tools
+TARGET_RELEASETOOLS_EXTENSIONS := device/motorola/msm8960_jbbl-common
 
 # Recovery
 TARGET_RECOVERY_PIXEL_FORMAT := "RGBA_8888"
 TARGET_RECOVERY_FSTAB := $(LOCAL_PATH)/rootdir/etc/fstab.qcom
+TARGET_USERIMAGES_USE_EXT4 := true
+
+# Telephony
+BOARD_USES_LEGACY_MMAP := true
 
 # TWRP
 TW_EXTERNAL_STORAGE_PATH := "/external_sd"
 TW_EXTERNAL_STORAGE_MOUNT_POINT := "external_sd"
-TARGET_USERIMAGES_USE_EXT4 := true
-# Needs to be changed for M
-DEVICE_RESOLUTION := 720x1280
-#DEVICE_RESOLUTION := 540x960
+
+# QCOM SELinux policy
+include device/qcom/sepolicy/sepolicy.mk
 
 # SELinux
 BOARD_SEPOLICY_DIRS += \
-    device/motorola/moto_msm8960_jbbl/sepolicy
+    device/motorola/msm8960-common_jbbl/sepolicy
 
 BOARD_SEPOLICY_UNION += \
     atvc.te \

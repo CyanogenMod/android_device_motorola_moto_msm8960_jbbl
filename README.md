@@ -1,13 +1,6 @@
-Unified device configuration for Motorola MSM8960 based devices
+Common device configuration for Motorola msm8960 based devices with jellybean bootloader
 ==============================
-Copyright 2014 - The CyanogenMod Project
 
-This device tree supports following devices (using 4.1 bootloader/firmware):
+This device tree is for devices that have a 4.1 bootloader.
 
-    asanti_c (xt897 - Photon Q - Sprint)
-    qinara (mb886 - Atrix HD - AT&T)
-    scorpion_mini (xt907 - Droid Razr M - Verizon)
-    smq_u (xt905 - Razr M - GSM)
-    solstice (xt901 - Electrify M - US Cellular)
-    vanquish (xt926 - Droid Razr HD - Verizon)
-    vanquish_u (xt925- Razr HD - GSM)
+Copyright 2015 - The CyanogenMod Project
