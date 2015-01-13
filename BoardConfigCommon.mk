@@ -70,6 +70,7 @@ TARGET_NO_ADAPTIVE_PLAYBACK := true
 TARGET_RELEASETOOLS_EXTENSIONS := device/motorola/msm8960_jbbl-common
 
 # Recovery
+TARGET_RECOVERY_DEVICE_DIRS := device/motorola/msm8960_jbbl-common
 TARGET_RECOVERY_PIXEL_FORMAT := "RGBA_8888"
 TARGET_RECOVERY_FSTAB := $(LOCAL_PATH)/rootdir/etc/fstab.qcom
 TARGET_USERIMAGES_USE_EXT4 := true
