@@ -83,6 +83,7 @@ TARGET_RELEASETOOLS_EXTENSIONS := device/motorola/moto_msm8960_jbbl
 TARGET_OTA_ASSERT_DEVICE := moto_msm8960_jbbl,moto_msm8960,xt901,solstice,xt905,smq_u,scorpion_mini_u,xt907,scorpion_mini,xt925,vanquish_u,xt926,vanquish,mb886,qinara,xt897,asanti,xt897c,asanti_c
 
 # Recovery
+TARGET_RECOVERY_DEVICE_DIRS := device/motorola/moto_msm8960_jbbl
 TARGET_RECOVERY_PIXEL_FORMAT := "RGBA_8888"
 TARGET_RECOVERY_FSTAB := $(LOCAL_PATH)/rootdir/etc/fstab.qcom
 
