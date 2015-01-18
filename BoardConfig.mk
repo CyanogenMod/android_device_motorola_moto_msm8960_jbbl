@@ -43,7 +43,6 @@ TARGET_LIBINIT_DEFINES_FILE := device/motorola/moto_msm8960_jbbl/init/init_moto_
 # Inline kernel building
 TARGET_KERNEL_SOURCE := kernel/motorola/msm8960-common
 TARGET_KERNEL_CONFIG := msm8960_mmi_defconfig
-TARGET_KERNEL_SELINUX_CONFIG := msm8960_mmi_selinux_defconfig
 BOARD_KERNEL_CMDLINE := console=/dev/null androidboot.hardware=qcom user_debug=31 loglevel=1 zcache androidboot.selinux=permissive
 BOARD_KERNEL_BASE := 0x80200000
 BOARD_KERNEL_PAGESIZE := 2048
