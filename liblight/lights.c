@@ -209,9 +209,8 @@ static int
 set_speaker_light_locked(struct light_device_t* dev,
         struct light_state_t const* state)
 {
-	int len;
-	int alpha, red, green, blue;
-	int blink, freq, pwm;
+	int red, green, blue;
+	int blink;
 	int onMS, offMS;
 	unsigned int colorRGB;
 
@@ -239,44 +238,27 @@ set_speaker_light_locked(struct light_device_t* dev,
 	green = (colorRGB >> 8) & 0xFF;
 	blue = colorRGB & 0xFF;
 
-	// R, G, B value is among 0, 1, 2
-	/*    if (red > 128)  red = 2;
-	else if (red <= 128 && red > 0) red = 1;
-	if (green > 128)  green = 2;
-	else if (green <= 128 && green > 0) green = 1;
-	if (blue > 128)  blue = 2;
-	else if (blue <= 128 && blue > 0) red = 1;
-	*/
+	blink = (onMS > 0 && offMS > 0) ? 1 : 0;
 
+	/* When blinking, pwm is no longer used for achieving the desired R, G or B part
+	   brightness but solely for the blinking. So the RGB LED turns to 3-bit binary mode
+	   and is able to produce only 2^3 different colors by combining the partial R/G/B
+	   components being either fully on or off.
+	   Adjust the R/G/B values so users are not confused by the LED becoming white as easily
+	   as when the R/G/B values selected in the color picker happen to be all non-zero.
+	*/
+	if (blink)
+	{
+		if (red > 127) red = 255;
+		else red = 0;
+		if (green > 127) green = 255;
+		else green = 0;
+		if (blue > 127) blue = 255;
+		else blue = 0;
+	}
 	write_int(RED_LED_FILE, red);
 	write_int(GREEN_LED_FILE, green);
 	write_int(BLUE_LED_FILE, blue);
-
-	// TODO
-	if (onMS > 0 && offMS > 0)
-	{
-		int totalMS = onMS + offMS;
-
-		// the LED appears to blink about once per second if freq is 20
-		// 1000ms / 20 = 50
-		freq = totalMS / 50;
-		// pwm specifies the ratio of ON versus OFF
-		// pwm = 0 -> always off
-		// pwm = 255 => always on
-		pwm = (onMS * 255) / totalMS;
-
-		// the low 4 bits are ignored, so round up if necessary
-		if (pwm > 0 && pwm < 16)
-			pwm = 16;
-
-		blink = 1;
-	}
-	else
-	{
-		blink = 0;
-		freq = 0;
-		pwm = 0;
-	}
 
 	if (blink)
 	{
@@ -289,7 +271,6 @@ set_speaker_light_locked(struct light_device_t* dev,
 
 	return 0;
 }
-
 
 static void
 handle_speaker_battery_locked(struct light_device_t* dev)
