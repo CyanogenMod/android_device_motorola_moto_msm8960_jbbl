@@ -263,7 +263,7 @@ set_speaker_light_locked(struct light_device_t* dev,
 	if (blink)
 	{
 		char blink[32];
-		snprintf(blink, sizeof(blink)-1, "%d %d", onMS, offMS);
+		snprintf(blink, sizeof(blink)-1, "%d %d 1 1", onMS, offMS);
 		write_str(RED_LED_BLINK, blink);
 	} else {
 		write_str(RED_LED_BLINK, "0");
