@@ -120,6 +120,10 @@ PRODUCT_COPY_FILES += \
 PRODUCT_PACKAGES += \
     AsantiKeypad
 
+# Unlock for US GSM
+PRODUCT_PACKAGES += \
+    unlock-us-gsm
+
 # Misc
 PRODUCT_PROPERTY_OVERRIDES += \
     ro.usb.mtp=0x2e62 \
